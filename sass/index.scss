@@ -19,14 +19,14 @@ body {
 
     &.no-repeat {
         background-repeat: no-repeat;
-        background-size: 70%;
+        background-size: 230px;
 
-        @include mq(tablet) {
-            background-size: 60%;
+        @include mq(phablet) {
+            background-size: 400px;
         }
 
-        @include mq(desktop) {
-            background-size: 55%;
+        @include mq(tablet) {
+            background-size: 560px;
         }
 
         &:before,
@@ -34,19 +34,39 @@ body {
             content: '';
             display: block;
             position: absolute;
-            top: -70px;
+            top: 0;
             left: 0;
             width: 100%;
-            height: 140px;
+            height: 70px;
             @include logo;
             background-image: url(/img/logo-slim.png);
+            background-position: center -30px;
             background-repeat: no-repeat;
-            background-size: 70%;
+            background-size: 230px;
+
+            @include mq(phablet) {
+                background-size: 400px;
+                background-position: center -55px;
+            }
+
+            @include mq(tablet) {
+                background-size: 560px;
+                background-position: center -75px;
+            }
         }
 
         &:after {
             top: auto;
-            bottom: -70px;
+            bottom: 0;
+            background-position: center 42px;
+
+            @include mq(phablet) {
+                background-position: center 25px;
+            }
+
+            @include mq(tablet) {
+                background-position: center 0;
+            }
         }
     }
 }
@@ -69,7 +89,7 @@ body {
         margin-top: 45px;
 
         @include mq(phablet) {
-            margin-top: 65px;
+            margin-top: 50px;
         }
 
         @include mq(tablet) {
