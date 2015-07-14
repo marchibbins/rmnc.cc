@@ -69,6 +69,50 @@ body {
     background-size: 55%;
   }
 }
+body.no-repeat {
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+@media (min-width: 46.25em) {
+  body.no-repeat {
+    background-size: 60%;
+  }
+}
+@media (min-width: 61.25em) {
+  body.no-repeat {
+    background-size: 55%;
+  }
+}
+body.no-repeat:before, body.no-repeat:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background-image: url(/img/logo.png);
+  background-position: center center;
+  background-repeat: repeat-y;
+  background-size: 80%;
+  background-image: url(/img/logo-slim.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+@media (min-width: 46.25em) {
+  body.no-repeat:before, body.no-repeat:after {
+    background-size: 60%;
+  }
+}
+@media (min-width: 61.25em) {
+  body.no-repeat:before, body.no-repeat:after {
+    background-size: 55%;
+  }
+}
+body.no-repeat:after {
+  top: auto;
+  bottom: -70px;
+}
 
 .hello {
   position: absolute;
@@ -83,5 +127,18 @@ body {
 @media (min-width: 46.25em) {
   .hello {
     font-size: 30px;
+  }
+}
+.no-repeat .hello {
+  margin-top: 45px;
+}
+@media (min-width: 34.375em) {
+  .no-repeat .hello {
+    margin-top: 65px;
+  }
+}
+@media (min-width: 46.25em) {
+  .no-repeat .hello {
+    margin-top: 100px;
   }
 }

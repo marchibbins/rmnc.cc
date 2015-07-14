@@ -1,5 +1,5 @@
 /* Holding page */
-body {
+@mixin logo() {
     background-image: url(/img/logo.png);
     background-position: center center;
     background-repeat: repeat-y;
@@ -11,6 +11,43 @@ body {
 
     @include mq(desktop) {
         background-size: 55%;
+    }
+}
+
+body {
+    @include logo;
+
+    &.no-repeat {
+        background-repeat: no-repeat;
+        background-size: 70%;
+
+        @include mq(tablet) {
+            background-size: 60%;
+        }
+
+        @include mq(desktop) {
+            background-size: 55%;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -70px;
+            left: 0;
+            width: 100%;
+            height: 140px;
+            @include logo;
+            background-image: url(/img/logo-slim.png);
+            background-repeat: no-repeat;
+            background-size: 70%;
+        }
+
+        &:after {
+            top: auto;
+            bottom: -70px;
+        }
     }
 }
 
@@ -26,5 +63,17 @@ body {
 
     @include mq(tablet) {
         font-size: 30px;
+    }
+
+    .no-repeat & {
+        margin-top: 45px;
+
+        @include mq(phablet) {
+            margin-top: 65px;
+        }
+
+        @include mq(tablet) {
+            margin-top: 100px;
+        }
     }
 }
