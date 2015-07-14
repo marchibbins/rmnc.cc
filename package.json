@@ -1,0 +1,26 @@
+{
+  "name": "rmnc.cc",
+  "homepage": "http://rmnc.cc",
+  "author": "Marc Hibbins <marc@marchibbins.com>",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "Attribution-ShareAlike 4.0 International",
+      "url": "http://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "scripts": {
+    "build": "gulp"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.5"
+  }
+}
