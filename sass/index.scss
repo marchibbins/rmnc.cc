@@ -1,0 +1,30 @@
+/* Holding page */
+body {
+    background-image: url(/img/logo.png);
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: 80%;
+
+    @include mq(tablet) {
+        background-size: 60%;
+    }
+
+    @include mq(desktop) {
+        background-size: 55%;
+    }
+}
+
+.hello {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: 15%;
+    font-size: 24px;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+    @include mq(tablet) {
+        font-size: 30px;
+    }
+}
