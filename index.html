@@ -24,10 +24,19 @@
         <script data-schema="Organization" type="application/ld+json">
             {
                 "@context": "http://schema.org",
-                "@type": "Organization",
+                "@type": "SportsOrganization",
                 "name": "Romance.cc",
                 "logo": "http://rmnc.cc/img/logo-square.png",
                 "url": "http://rmnc.cc/",
+                "sport": "Cycling",
+                "location": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "London",
+                        "addressCountry": "United Kingdom"
+                    }
+                },
                 "sameAs":[
                     "https://twitter.com/rmnc_cc",
                     "https://instagram.com/rmnc_cc",
