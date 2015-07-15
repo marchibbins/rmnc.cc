@@ -166,3 +166,155 @@ body.no-repeat:after {
     margin-top: 100px;
   }
 }
+
+.logo-hover {
+  background: black;
+}
+@media (min-width: 46.25em) {
+  .logo-hover {
+    background-image: url(/img/logo-slim.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 300px 78px;
+    background-position: center bottom -69px;
+  }
+}
+@media (min-width: 46.25em) and (min-width: 46.25em) {
+  .logo-hover {
+    background-size: 540px 138px;
+  }
+}
+@media (min-width: 46.25em) and (min-width: 61.25em) {
+  .logo-hover {
+    background-size: 640px 164px;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .logo-hover {
+    background-image: url(/img/logo-slim.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 300px 78px;
+    background-position: center bottom -82px;
+  }
+}
+@media (min-width: 61.25em) and (min-width: 46.25em) {
+  .logo-hover {
+    background-size: 540px 138px;
+  }
+}
+@media (min-width: 61.25em) and (min-width: 61.25em) {
+  .logo-hover {
+    background-size: 640px 164px;
+  }
+}
+
+.logo-hover:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 46.25em) {
+  .logo-hover:before {
+    background-image: url(/img/logo-slim.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 300px 78px;
+    background-position: center top -69px;
+  }
+}
+@media (min-width: 46.25em) and (min-width: 46.25em) {
+  .logo-hover:before {
+    background-size: 540px 138px;
+  }
+}
+@media (min-width: 46.25em) and (min-width: 61.25em) {
+  .logo-hover:before {
+    background-size: 640px 164px;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .logo-hover:before {
+    background-image: url(/img/logo-slim.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 300px 78px;
+    background-position: center top -82px;
+  }
+}
+@media (min-width: 61.25em) and (min-width: 46.25em) {
+  .logo-hover:before {
+    background-size: 540px 138px;
+  }
+}
+@media (min-width: 61.25em) and (min-width: 61.25em) {
+  .logo-hover:before {
+    background-size: 640px 164px;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url(/img/logo-slim.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 300px 78px;
+  width: 300px;
+  height: 78px;
+  margin-left: -150px;
+  margin-top: -39px;
+}
+@media (min-width: 46.25em) {
+  .logo {
+    background-size: 540px 138px;
+  }
+}
+@media (min-width: 61.25em) {
+  .logo {
+    background-size: 640px 164px;
+  }
+}
+@media (min-width: 30em) {
+  .logo {
+    width: 420px;
+    height: 108px;
+    margin-left: -210px;
+    margin-top: -54px;
+  }
+}
+@media (min-width: 46.25em) {
+  .logo {
+    width: 540px;
+    height: 138px;
+    margin-left: -270px;
+    margin-top: -69px;
+  }
+}
+@media (min-width: 61.25em) {
+  .logo {
+    width: 640px;
+    height: 164px;
+    margin-left: -320px;
+    margin-top: -82px;
+  }
+}
+
+.link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.link:hover, .link:focus, .link:active {
+  background: black;
+}

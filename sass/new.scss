@@ -1,0 +1,123 @@
+$logo-sizes: (
+    mobile: (
+        width: 300px,
+        height: 78px
+    ),
+    mobileLandscape: (
+        width: 420px,
+        height: 108px
+    ),
+    tablet: (
+        width: 540px,
+        height: 138px
+    ),
+    desktop: (
+        width: 640px,
+        height: 164px
+    )
+);
+
+@function get-logo-size($dim, $name: mobile) {
+    @return map-get(map-get($logo-sizes, $name), $dim);
+}
+
+@mixin logo-container-size($name: mobile) {
+    $width: get-logo-size(width, $name);
+    $height: get-logo-size(height, $name);
+    width: $width;
+    height: $height;
+    margin-left: -($width / 2);
+    margin-top: -($height / 2);
+}
+
+@mixin logo-background-size($name: mobile) {
+    $width: get-logo-size(width, $name);
+    $height: get-logo-size(height, $name);
+    background-size: $width $height;
+}
+
+@mixin logo-background {
+    background-image: url(/img/logo-slim.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include logo-background-size;
+
+    @include mq(tablet) {
+        @include logo-background-size(tablet);
+    }
+
+    @include mq(desktop) {
+        @include logo-background-size(desktop);
+    }
+}
+
+.logo-hover {
+    background: black;
+
+    @include mq(tablet) {
+        @include logo-background;
+        background-position: center bottom (-(get-logo-size(height, tablet) / 2));
+    }
+
+    @include mq(desktop) {
+        @include logo-background;
+        background-position: center bottom (-(get-logo-size(height, desktop) / 2));
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @include mq(tablet) {
+            @include logo-background;
+            background-position: center top (-(get-logo-size(height, tablet) / 2));
+        }
+
+        @include mq(desktop) {
+            @include logo-background;
+            background-position: center top (-(get-logo-size(height, desktop) / 2));
+        }
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include logo-background;
+    @include logo-container-size;
+
+    @include mq(mobileLandscape) {
+        @include logo-container-size(mobileLandscape);
+    }
+
+    @include mq(tablet) {
+        @include logo-container-size(tablet);
+    }
+
+    @include mq(desktop) {
+        @include logo-container-size(desktop);
+    }
+}
+
+.link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: black;
+
+    }
+}
