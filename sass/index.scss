@@ -59,6 +59,7 @@ $logo-sizes: (
 
 .container {
     background-color: black;
+    overflow-x: hidden;
 
     @include logo-background;
     background-position: center bottom (-(logo-size(height) / 2));
