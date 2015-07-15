@@ -52,185 +52,35 @@ a:active {
   text-decoration: underline;
 }
 
-/* Holding page */
-body {
-  background-image: url(/img/logo.png);
-  background-position: center center;
-  background-repeat: repeat-y;
-  background-size: 80%;
-}
-@media (min-width: 46.25em) {
-  body {
-    background-size: 60%;
-  }
-}
-@media (min-width: 61.25em) {
-  body {
-    background-size: 55%;
-  }
-}
-body.no-repeat {
-  background-repeat: no-repeat;
-  background-size: 230px;
-}
-@media (min-width: 34.375em) {
-  body.no-repeat {
-    background-size: 400px;
-  }
-}
-@media (min-width: 46.25em) {
-  body.no-repeat {
-    background-size: 560px;
-  }
-}
-body.no-repeat:before, body.no-repeat:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background-image: url(/img/logo.png);
-  background-position: center center;
-  background-repeat: repeat-y;
-  background-size: 80%;
+.container {
+  background-color: black;
   background-image: url(/img/logo-slim.png);
-  background-position: center -30px;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 230px;
+  background-size: 300px 78px;
+  background-position: center bottom -39px;
 }
 @media (min-width: 46.25em) {
-  body.no-repeat:before, body.no-repeat:after {
-    background-size: 60%;
-  }
-}
-@media (min-width: 61.25em) {
-  body.no-repeat:before, body.no-repeat:after {
-    background-size: 55%;
-  }
-}
-@media (min-width: 34.375em) {
-  body.no-repeat:before, body.no-repeat:after {
-    background-size: 400px;
-    background-position: center -55px;
-  }
-}
-@media (min-width: 46.25em) {
-  body.no-repeat:before, body.no-repeat:after {
-    background-size: 560px;
-    background-position: center -75px;
-  }
-}
-body.no-repeat:after {
-  top: auto;
-  bottom: 0;
-  background-position: center 42px;
-}
-@media (min-width: 34.375em) {
-  body.no-repeat:after {
-    background-position: center 25px;
-  }
-}
-@media (min-width: 46.25em) {
-  body.no-repeat:after {
-    background-position: center 0;
-  }
-}
-
-.hello {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  margin-top: 15%;
-  font-size: 24px;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-@media (min-width: 46.25em) {
-  .hello {
-    font-size: 30px;
-  }
-}
-.no-repeat .hello {
-  margin-top: 45px;
-}
-@media (min-width: 34.375em) {
-  .no-repeat .hello {
-    margin-top: 50px;
-  }
-}
-@media (min-width: 46.25em) {
-  .no-repeat .hello {
-    margin-top: 100px;
-  }
-}
-
-.logo-hover {
-  background: black;
-}
-@media (min-width: 20em) {
-  .logo-hover {
-    background-image: url(/img/logo-slim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 300px 78px;
-    background-position: center bottom -39px;
-  }
-}
-@media (min-width: 20em) and (min-width: 46.25em) {
-  .logo-hover {
+  .container {
     background-size: 540px 138px;
   }
 }
-@media (min-width: 20em) and (min-width: 61.25em) {
-  .logo-hover {
+@media (min-width: 61.25em) {
+  .container {
     background-size: 640px 164px;
   }
 }
-
 @media (min-width: 46.25em) {
-  .logo-hover {
-    background-image: url(/img/logo-slim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 300px 78px;
+  .container {
     background-position: center bottom -69px;
   }
 }
-@media (min-width: 46.25em) and (min-width: 46.25em) {
-  .logo-hover {
-    background-size: 540px 138px;
-  }
-}
-@media (min-width: 46.25em) and (min-width: 61.25em) {
-  .logo-hover {
-    background-size: 640px 164px;
-  }
-}
-
 @media (min-width: 61.25em) {
-  .logo-hover {
-    background-image: url(/img/logo-slim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 300px 78px;
+  .container {
     background-position: center bottom -82px;
   }
 }
-@media (min-width: 61.25em) and (min-width: 46.25em) {
-  .logo-hover {
-    background-size: 540px 138px;
-  }
-}
-@media (min-width: 61.25em) and (min-width: 61.25em) {
-  .logo-hover {
-    background-size: 640px 164px;
-  }
-}
-
-.logo-hover:before {
+.container:before {
   content: '';
   display: block;
   position: absolute;
@@ -238,64 +88,30 @@ body.no-repeat:after {
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url(/img/logo-slim.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 300px 78px;
+  background-position: center top -39px;
 }
-@media (min-width: 20em) {
-  .logo-hover:before {
-    background-image: url(/img/logo-slim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 300px 78px;
-    background-position: center top -39px;
-  }
-}
-@media (min-width: 20em) and (min-width: 46.25em) {
-  .logo-hover:before {
+@media (min-width: 46.25em) {
+  .container:before {
     background-size: 540px 138px;
   }
 }
-@media (min-width: 20em) and (min-width: 61.25em) {
-  .logo-hover:before {
+@media (min-width: 61.25em) {
+  .container:before {
     background-size: 640px 164px;
   }
 }
-
 @media (min-width: 46.25em) {
-  .logo-hover:before {
-    background-image: url(/img/logo-slim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 300px 78px;
+  .container:before {
     background-position: center top -69px;
   }
 }
-@media (min-width: 46.25em) and (min-width: 46.25em) {
-  .logo-hover:before {
-    background-size: 540px 138px;
-  }
-}
-@media (min-width: 46.25em) and (min-width: 61.25em) {
-  .logo-hover:before {
-    background-size: 640px 164px;
-  }
-}
-
 @media (min-width: 61.25em) {
-  .logo-hover:before {
-    background-image: url(/img/logo-slim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 300px 78px;
+  .container:before {
     background-position: center top -82px;
-  }
-}
-@media (min-width: 61.25em) and (min-width: 46.25em) {
-  .logo-hover:before {
-    background-size: 540px 138px;
-  }
-}
-@media (min-width: 61.25em) and (min-width: 61.25em) {
-  .logo-hover:before {
-    background-size: 640px 164px;
   }
 }
 
