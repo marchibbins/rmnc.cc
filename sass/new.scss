@@ -55,6 +55,11 @@ $logo-sizes: (
 .logo-hover {
     background: black;
 
+    @include mq(mobile) {
+        @include logo-background;
+        background-position: center bottom (-(get-logo-size(height, mobile) / 2));
+    }
+
     @include mq(tablet) {
         @include logo-background;
         background-position: center bottom (-(get-logo-size(height, tablet) / 2));
@@ -73,6 +78,11 @@ $logo-sizes: (
         left: 0;
         width: 100%;
         height: 100%;
+
+        @include mq(mobile) {
+            @include logo-background;
+            background-position: center top (-(get-logo-size(height, mobile) / 2));
+        }
 
         @include mq(tablet) {
             @include logo-background;
