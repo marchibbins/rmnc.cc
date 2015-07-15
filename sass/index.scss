@@ -15,6 +15,10 @@ $logo-sizes: (
     desktop: (
         width: 640px,
         height: 164px
+    ),
+    wide: (
+        width: 720px,
+        height: 184px
     )
 );
 
@@ -48,12 +52,10 @@ $logo-sizes: (
 
     @include logo-background-size;
 
-    @include mq(tablet) {
-        @include logo-background-size(tablet);
-    }
-
-    @include mq(desktop) {
-        @include logo-background-size(desktop);
+    @each $breakpoint, $size in $logo-sizes {
+        @include mq($breakpoint) {
+            @include logo-background-size($breakpoint);
+        }
     }
 }
 
@@ -64,12 +66,10 @@ $logo-sizes: (
     @include logo-background;
     background-position: center bottom (-(logo-size(height) / 2));
 
-    @include mq(tablet) {
-        background-position: center bottom (-(logo-size(height, tablet) / 2));
-    }
-
-    @include mq(desktop) {
-        background-position: center bottom (-(logo-size(height, desktop) / 2));
+    @each $breakpoint, $size in $logo-sizes {
+        @include mq($breakpoint) {
+            background-position: center bottom (-(logo-size(height, $breakpoint) / 2));
+        }
     }
 
     &:before {
@@ -84,12 +84,10 @@ $logo-sizes: (
         @include logo-background;
         background-position: center top (-(logo-size(height, mobile) / 2));
 
-        @include mq(tablet) {
-            background-position: center top (-(logo-size(height, tablet) / 2));
-        }
-
-        @include mq(desktop) {
-            background-position: center top (-(logo-size(height, desktop) / 2));
+        @each $breakpoint, $size in $logo-sizes {
+            @include mq($breakpoint) {
+                background-position: center top (-(logo-size(height, $breakpoint) / 2));
+            }
         }
     }
 }
@@ -101,16 +99,10 @@ $logo-sizes: (
     @include logo-background;
     @include logo-container;
 
-    @include mq(mobileLandscape) {
-        @include logo-container(mobileLandscape);
-    }
-
-    @include mq(tablet) {
-        @include logo-container(tablet);
-    }
-
-    @include mq(desktop) {
-        @include logo-container(desktop);
+    @each $breakpoint, $size in $logo-sizes {
+        @include mq($breakpoint) {
+            @include logo-container($breakpoint);
+        }
     }
 }
 

@@ -61,6 +61,16 @@ a:active {
   background-size: 300px 78px;
   background-position: center bottom -39px;
 }
+@media (min-width: 20em) {
+  .container {
+    background-size: 300px 78px;
+  }
+}
+@media (min-width: 30em) {
+  .container {
+    background-size: 420px 108px;
+  }
+}
 @media (min-width: 46.25em) {
   .container {
     background-size: 540px 138px;
@@ -71,6 +81,21 @@ a:active {
     background-size: 640px 164px;
   }
 }
+@media (min-width: 81.25em) {
+  .container {
+    background-size: 720px 184px;
+  }
+}
+@media (min-width: 20em) {
+  .container {
+    background-position: center bottom -39px;
+  }
+}
+@media (min-width: 30em) {
+  .container {
+    background-position: center bottom -54px;
+  }
+}
 @media (min-width: 46.25em) {
   .container {
     background-position: center bottom -69px;
@@ -79,6 +104,11 @@ a:active {
 @media (min-width: 61.25em) {
   .container {
     background-position: center bottom -82px;
+  }
+}
+@media (min-width: 81.25em) {
+  .container {
+    background-position: center bottom -92px;
   }
 }
 .container:before {
@@ -95,6 +125,16 @@ a:active {
   background-size: 300px 78px;
   background-position: center top -39px;
 }
+@media (min-width: 20em) {
+  .container:before {
+    background-size: 300px 78px;
+  }
+}
+@media (min-width: 30em) {
+  .container:before {
+    background-size: 420px 108px;
+  }
+}
 @media (min-width: 46.25em) {
   .container:before {
     background-size: 540px 138px;
@@ -105,6 +145,21 @@ a:active {
     background-size: 640px 164px;
   }
 }
+@media (min-width: 81.25em) {
+  .container:before {
+    background-size: 720px 184px;
+  }
+}
+@media (min-width: 20em) {
+  .container:before {
+    background-position: center top -39px;
+  }
+}
+@media (min-width: 30em) {
+  .container:before {
+    background-position: center top -54px;
+  }
+}
 @media (min-width: 46.25em) {
   .container:before {
     background-position: center top -69px;
@@ -113,6 +168,11 @@ a:active {
 @media (min-width: 61.25em) {
   .container:before {
     background-position: center top -82px;
+  }
+}
+@media (min-width: 81.25em) {
+  .container:before {
+    background-position: center top -92px;
   }
 }
 
@@ -129,6 +189,16 @@ a:active {
   margin-left: -150px;
   margin-top: -39px;
 }
+@media (min-width: 20em) {
+  .logo {
+    background-size: 300px 78px;
+  }
+}
+@media (min-width: 30em) {
+  .logo {
+    background-size: 420px 108px;
+  }
+}
 @media (min-width: 46.25em) {
   .logo {
     background-size: 540px 138px;
@@ -137,6 +207,19 @@ a:active {
 @media (min-width: 61.25em) {
   .logo {
     background-size: 640px 164px;
+  }
+}
+@media (min-width: 81.25em) {
+  .logo {
+    background-size: 720px 184px;
+  }
+}
+@media (min-width: 20em) {
+  .logo {
+    width: 300px;
+    height: 78px;
+    margin-left: -150px;
+    margin-top: -39px;
   }
 }
 @media (min-width: 30em) {
@@ -161,6 +244,14 @@ a:active {
     height: 164px;
     margin-left: -320px;
     margin-top: -82px;
+  }
+}
+@media (min-width: 81.25em) {
+  .logo {
+    width: 720px;
+    height: 184px;
+    margin-left: -360px;
+    margin-top: -92px;
   }
 }
 
