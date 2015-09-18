@@ -188,7 +188,7 @@ a:active {
   height: 78px;
   margin-left: -150px;
   margin-top: -39px;
-  background-image: url(/img/logo-pattern.jpg);
+  background-image: url(/img/logo-animated.gif);
 }
 @media (min-width: 20em) {
   .logo {
