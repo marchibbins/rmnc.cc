@@ -99,6 +99,12 @@ $logo-sizes: (
     @include logo-background;
     @include logo-container;
 
+    background-image: url(/img/logo-pattern.jpg);
+
+    a {
+        text-decoration: none;
+    }
+
     @each $breakpoint, $size in $logo-sizes {
         @include mq($breakpoint) {
             @include logo-container($breakpoint);

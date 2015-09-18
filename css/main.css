@@ -188,6 +188,7 @@ a:active {
   height: 78px;
   margin-left: -150px;
   margin-top: -39px;
+  background-image: url(/img/logo-pattern.jpg);
 }
 @media (min-width: 20em) {
   .logo {
@@ -213,6 +214,9 @@ a:active {
   .logo {
     background-size: 720px 184px;
   }
+}
+.logo a {
+  text-decoration: none;
 }
 @media (min-width: 20em) {
   .logo {
