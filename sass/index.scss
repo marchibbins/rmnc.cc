@@ -108,6 +108,7 @@ $logo-sizes: (
     @each $breakpoint, $size in $logo-sizes {
         @include mq($breakpoint) {
             @include logo-container($breakpoint);
+            margin-top: -(logo-size(height, $breakpoint) / 2) - 100;
         }
     }
 }
@@ -124,5 +125,16 @@ $logo-sizes: (
     &:focus,
     &:active {
         background: black;
+    }
+}
+
+.social {
+    clear: both;
+    text-align: center;
+
+    img {
+        border: 0;
+        margin: 20px 0;
+        padding: 0 5px;
     }
 }
