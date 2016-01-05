@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 // Styles
 gulp.task('styles', function() {
     return sass('sass/main.scss', {
-        style: 'expanded'
+        style: 'expanded',
+        sourcemap: true
     })
     .pipe(gulp.dest('css'))
     .pipe(rename({
