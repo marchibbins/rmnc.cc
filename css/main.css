@@ -282,7 +282,7 @@ a:active {
 }
 .social img {
   border: 0;
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding: 0 5px;
 }
 
@@ -293,7 +293,7 @@ a:active {
   width: 100%;
 }
 .form-container #mc_embed_signup {
-  margin: 50px auto 0;
+  margin: -50px auto 0;
   background-color: black;
 }
 @media (min-width: 20em) {
@@ -325,6 +325,9 @@ a:active {
   padding: 0;
 }
 @media (min-width: 46.25em) {
+  .form-container #mc_embed_signup {
+    margin-top: 50px;
+  }
   .form-container #mc_embed_signup #mc_embed_signup_scroll {
     padding: 0 100px;
   }

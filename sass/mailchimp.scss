@@ -10,7 +10,7 @@ $submitWidth: 135px;
     width: 100%;
 
     #mc_embed_signup {
-        margin: $marginTop auto 0;
+        margin: -$marginTop auto 0;
         background-color: black;
 
         @each $breakpoint, $size in $logo-sizes {
@@ -24,6 +24,8 @@ $submitWidth: 135px;
         }
 
         @include mq(tablet) {
+            margin-top: $marginTop;
+
             #mc_embed_signup_scroll {
                 padding: 0 $paddingWidth;
             }
