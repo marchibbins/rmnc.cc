@@ -392,6 +392,7 @@ a:active {
   border-color: white;
   border-radius: 0;
   font-size: 14px;
+  margin: 0;
 }
 .form-container #mc_embed_signup .mc-submit {
   float: right;
