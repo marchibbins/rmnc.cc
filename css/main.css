@@ -389,8 +389,9 @@ a:active {
 
 .form-container #mc_embed_signup .mc-field-group input {
   background-color: #eee;
-  font-size: 14px;
   border-color: white;
+  border-radius: 0;
+  font-size: 14px;
 }
 .form-container #mc_embed_signup .mc-submit {
   float: right;
