@@ -1,70 +1,52 @@
 // Mailchimp
-$marginTop: 50px;
-$paddingWidth: 100px;
 $submitWidth: 135px;
 
 .form-container {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
+    margin-bottom: 26px;
+    min-height: 35px;
 
     #mc_embed_signup {
-        margin: -$marginTop auto 0;
-        background-color: black;
-
-        @each $breakpoint, $size in $logo-sizes {
-            @include mq($breakpoint) {
-                width: logo-size(width, $breakpoint);
-            }
-        }
+        margin: 0 auto;
 
         form {
             padding: 0;
         }
 
-        @include mq(tablet) {
-            margin-top: $marginTop;
-
-            #mc_embed_signup_scroll {
-                padding: 0 $paddingWidth;
-            }
-        }
-
         .mc-field-group {
-            float: left;
             margin-bottom: 0;
             min-height: 0;
             padding-bottom: 0;
-            width: auto;
+            width: 100%;
 
-            @each $breakpoint, $size in $logo-sizes {
-                @include mq($breakpoint) {
-                    width: logo-size(width, $breakpoint) - $submitWidth;
-                }
+            @include mq(mobileLandscape) {
+                float: left;
+                width: $mobileLandscapeWidth - $submitWidth;
             }
 
             @include mq(tablet) {
-                @each $breakpoint, $size in $logo-sizes {
-                    @include mq($breakpoint) {
-                        width: logo-size(width, $breakpoint) - ($submitWidth + $paddingWidth * 2);
-                    }
-                }
+                width: $tabletWidth - $submitWidth;
             }
 
             input {
                 background-color: #eee;
                 border-color: white;
                 border-radius: 0;
+                font-family: "Courier New", Courier, monospace;
                 font-size: 14px;
                 margin: 0;
             }
         }
 
         .mc-submit {
-            float: right;
-            text-align: right;
-            width: $submitWidth;
+            margin-top: 10px;
+            text-align: center;
+
+            @include mq(mobileLandscape) {
+                margin-top: 0;
+                float: right;
+                text-align: right;
+                width: $submitWidth;
+            }
         }
 
         div.mce_inline_error {
@@ -73,27 +55,10 @@ $submitWidth: 135px;
             color: #f00;
         }
 
-        #mce-responses {
-            margin-left: 0;
-            padding-left: 0;
-
-            div.response {
-                margin: 0;
-                padding: 0;
-            }
-
-            #mce-error-response {
-                color: #f00;
-            }
-
-            #mce-success-response {
-                color: #0f0;
-            }
-        }
-
         .button {
             border-radius: 0;
             color: black;
+            font-family: "Courier New", Courier, monospace;
             font-weight: normal;
             line-height: 35px;
             margin: 0;
@@ -101,15 +66,8 @@ $submitWidth: 135px;
 
             &:hover,
             &:active {
-                background-color: #0f0;
+                background-color: #ff0101;
             }
-        }
-
-        .form-title {
-            font-weight: normal;
-            line-height: 24px;
-            margin-bottom: 30px;
-            text-align: center;
         }
     }
 }
